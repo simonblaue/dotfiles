@@ -1,0 +1,14 @@
+# Config for my alacritty in sway
+
+import = [
+  "~/.config/alacritty/themes/apple.toml"
+] 
+
+[window] 
+  padding= {x=6, y=8}
+
+[font]
+  normal = {family="SauceCodeProNerdFontMono" ,style="Regular"}
+  size = 10
+
+
