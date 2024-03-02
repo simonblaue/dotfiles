@@ -41,7 +41,7 @@ titlebar_border_thickness 0
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/simonblaue/pictures/wallpapers/moon.png fill
+output * bg /home/simonblaue/Pictures/wallpapers/moon.png fill
 
 ## Execute the messages system
 exec mako
