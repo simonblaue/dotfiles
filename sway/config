@@ -119,6 +119,22 @@ input "1452:834:Apple_Internal_Keyboard_/_Trackpad" {
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Reboot 
+    set $Pause-break  System (l)lock, (k) locktoblack, (e) exit, (s) suspend, (r) reboot, (End) shutdown
+    mode "$Pause-break" {
+      bindsym e       exec --no-startup-id $wmexit, 				mode "default"
+      bindsym s       exec --no-startup-id systemctl suspend, 	mode "default"
+      bindsym r       exec --no-startup-id systemctl reboot, 		mode "default"
+      bindsym End     exec --no-startup-id systemctl poweroff -i, mode "default"
+      bindsym l       exec --no-startup-id $lock, 				mode "default"
+      bindsym k       exec --no-startup-id $locksoff, 			mode "default"
+
+      bindsym Return  mode "default"
+      bindsym Escape  mode "default"
+    }
+
+    bindsym $mod+Shift+P mode "$Pause-break" 
 #
 # Moving around:
 #
